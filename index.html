@@ -4,274 +4,263 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Laguna Lounge CSC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --navy: #0A1D37;
-      --teal: #4FC3F7;
-      --yellow: #FFB300;
-      --sand: #FFF8E1;
-      --dark-text: #111;
-    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { 
-      font-family: 'Open Sans', sans-serif; 
-      background: white; 
-      color: var(--dark-text); 
-      line-height: 1.8; 
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.7;
       font-size: 18px;
+      overflow-x: hidden;
     }
-    h1, h2, h3 { 
-      font-family: 'Roboto', sans-serif; 
-      color: var(--navy); 
-      font-weight: 700;
-    }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-    .text-center { text-align: center; }
-
-    /* TOP NAV */
-    nav {
-      background: var(--navy); padding: 1.5rem 0; text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      position: sticky; top: 0; z-index: 1000;
-    }
-    nav a {
-      color: white; margin: 0 1.5rem; font-weight: 600; 
-      text-decoration: none; font-size: 1.1rem;
-    }
-    nav a:hover { color: var(--teal); }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
 
     /* HERO */
     .hero {
-      background: var(--sand); padding: 6rem 1rem; text-align: center;
-    }
-    .logo { 
-      width: 240px; border-radius: 50%; border: 10px solid white; 
-      box-shadow: 0 15px 35px rgba(0,0,0,0.2); margin-bottom: 2rem;
-    }
-    .hero h1 {
-      font-size: 4.2rem; color: var(--navy); margin: 1rem 0;
-    }
-    .hero p {
-      font-size: 1.4rem; color: #333; max-width: 800px; margin: 1.5rem auto;
-    }
-    .btn {
-      display: inline-block; padding: 16px 44px; font-weight: 600;
-      background: var(--yellow); color: var(--navy); border-radius: 12px;
-      font-size: 1.2rem; text-decoration: none; margin-top: 1rem;
-      box-shadow: 0 6px 20px rgba(255,179,0,0.3);
-    }
-    .btn:hover { background: var(--teal); color: white; }
-
-    .section { padding: 5rem 0; }
-    .bg-white { background: white; }
-    .bg-light { background: #f9f9f9; }
-
-    /* CARDS - ALL IMAGES WORKING */
-    .features-grid {
-      display: grid;
-      gap: 2rem;
-      margin-top: 3rem;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-    .feature-card {
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    }
-    .feature-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-bottom: 5px solid var(--yellow);
-    }
-    .feature-content {
-      padding: 2.2rem;
-      flex-grow: 1;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
     }
-    .feature-content h3 {
-      font-size: 1.9rem;
-      margin: 0 0 0.8rem 0;
-      color: var(--navy);
+    .logo {
+      width: 160px;
+      border-radius: 50%;
+      border: 5px solid #4FC3F7;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 30px rgba(79, 195, 247, 0.4);
     }
-    .feature-content p {
-      font-size: 1.15rem;
-      color: #444;
-      margin: 0;
-      line-height: 1.6;
-      font-weight: 500;
-    }
-
-    /* FORM SECTION */
-    .form-section { 
-      background: var(--sand); padding: 6rem 1rem;
-    }
-    .form-container { max-width: 550px; margin: 0 auto; }
-    .form-container h2 { font-size: 2.8rem; color: var(--navy); }
-    .form-container p { font-size: 1.2rem; color: #333; margin-bottom: 2rem; }
-    
-    .form-container ol {
-      counter-reset: item;
-      list-style: none;
-      padding: 0;
-      margin: 2rem 0;
-    }
-    .form-container ol li {
-      counter-increment: item;
+    .hero h1 {
+      font-size: 3.8rem;
+      font-weight: 900;
+      letter-spacing: -2px;
       margin: 1rem 0;
-      font-size: 1.1rem;
-      color: #222;
-      position: relative;
-      padding-left: 2.5rem;
     }
-    .form-container ol li::before {
-      content: counter(item) ".";
-      font-weight: bold;
-      color: var(--navy);
-      position: absolute;
-      left: 0;
-      width: 2rem;
-      text-align: right;
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      opacity: 0.85;
+      margin: 1.5rem 0;
+    }
+    .btn {
+      background: #FFB300;
+      color: #000;
+      padding: 1rem 2.8rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+      box-shadow: 0 8px 25px rgba(255, 179, 0, 0.4);
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background: #4FC3F7;
+      color: #fff;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(79, 195, 247, 0.4);
     }
 
+    /* SECTION */
+    section {
+      padding: 5rem 0;
+    }
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    /* FEATURES */
+    .features {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin: 3rem 0;
+    }
+    .feature {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 16px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .feature h3 {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      font-weight: 700;
+    }
+    .feature p {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    /* FORM */
+    .form-box {
+      background: rgba(255, 255, 255, 0.08);
+      max-width: 500px;
+      margin: 3rem auto;
+      padding: 2.5rem;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .form-box h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .form-box p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+    .steps {
+      margin: 1.5rem 0;
+      padding-left: 1.2rem;
+      font-weight: 600;
+    }
+    .steps li {
+      margin: 0.7rem 0;
+    }
     input, textarea {
-      width: 100%; padding: 16px; margin: 12px 0; 
-      border: 2px solid #ccc; border-radius: 10px; 
-      font-size: 1.1rem; font-family: 'Open Sans', sans-serif;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 1rem;
+      border-radius: 12px;
+      margin: 0.8rem 0;
+      font-size: 1rem;
+    }
+    input::placeholder, textarea::placeholder {
+      color: rgba(255, 255, 255, 0.6);
     }
     button {
-      background: var(--yellow); color: var(--navy); border: none; 
-      padding: 18px; width: 100%; font-weight: 600; font-size: 1.2rem; 
-      border-radius: 10px; cursor: pointer; margin-top: 1rem;
-      box-shadow: 0 6px 20px rgba(255,179,0,0.3);
+      width: 100%;
+      background: #FFB300;
+      color: #000;
+      border: none;
+      padding: 1rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: 0.3s;
     }
-    button:hover { background: var(--teal); color: white; }
+    button:hover {
+      background: #4FC3F7;
+      color: white;
+    }
 
-    footer { 
-      background: var(--navy); color: white; text-align: center; 
-      padding: 2.5rem; font-size: 1rem;
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
     }
-    footer a { color: var(--teal); text-decoration: underline; }
+    footer a {
+      color: #4FC3F7;
+      text-decoration: underline;
+    }
+
+    /* SMOOTH SCROLL */
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body>
 
-  <!-- TOP NAV -->
-  <nav>
-    <div class="container">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="activities.html">Activities</a>
-      <a href="join.html">Join</a>
-    </div>
-  </nav>
-
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <img src="logo.png" alt="Laguna Lounge Logo" class="logo">
+      <img src="logo.png" alt="Laguna Lounge" class="logo">
       <h1>Laguna Lounge CSC</h1>
       <p>Private Members Social Club · Community · Culture · Responsibility</p>
-      <a href="#join" class="btn">Become a Member</a>
+      <a href="#join" class="btn">Join the Movement</a>
     </div>
   </section>
 
   <!-- MISSION -->
-  <section class="section bg-white">
-    <div class="container text-center">
+  <section>
+    <div class="container">
       <h2>A Private Haven for Conscious Living</h2>
-      <p style="max-width: 850px; margin: 1.8rem auto;">
-        We are a <strong>registered asociación cultural</strong> operating in Spain's legally tolerated framework. 
-        Our mission is <strong>community, creativity, and well-being</strong> — not consumption.
+      <p>
+        We are a <strong>registered asociación cultural</strong> in Spain. 
+        Our focus: <strong>community, creativity, well-being</strong> — not consumption.
       </p>
     </div>
   </section>
 
-  <!-- FEATURES WITH 100% WORKING IMAGES -->
-  <section class="section bg-light">
+  <!-- FEATURES -->
+  <section>
     <div class="container">
-      <div class="features-grid">
-        <!-- CARD 1: PRIVATE & SAFE -->
-        <div class="feature-card">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Private & Safe" class="feature-img">
-          <div class="feature-content">
-            <h3>Private & Safe</h3>
-            <p>Members-only. ID check. Zero tolerance for disrespect. No tourists.</p>
-          </div>
+      <div class="features">
+        <div class="feature">
+          <h3>Private & Safe</h3>
+          <p>Members-only. ID verified. Zero tolerance for disrespect. No tourists.</p>
         </div>
-
-        <!-- CARD 2: CULTURE & CREATIVITY - FIXED IMAGE -->
-        <div class="feature-card">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Culture & Creativity" class="feature-img">
-          <div class="feature-content">
-            <h3>Culture & Creativity</h3>
-            <p>Music, art, workshops, cinema, gaming — a true cultural hub.</p>
-          </div>
+        <div class="feature">
+          <h3>Culture & Creativity</h3>
+          <p>Music, art, workshops, cinema, gaming — a true cultural hub.</p>
         </div>
-
-        <!-- CARD 3: EDUCATION & WELLNESS -->
-        <div class="feature-card">
-          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" alt="Education & Wellness" class="feature-img">
-          <div class="feature-content">
-            <h3>Education & Wellness</h3>
-            <p>Harm reduction, science talks, yoga, mental health support.</p>
-          </div>
+        <div class="feature">
+          <h3>Education & Wellness</h3>
+          <p>Harm reduction, science talks, yoga, mental health support.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT FORM -->
-  <section id="join" class="form-section">
+  <!-- JOIN -->
+  <section id="join">
     <div class="container">
-      <div class="form-container">
+      <div class="form-box">
         <h2>Get in Touch</h2>
-        <p><strong>Referral only.</strong> Fill out to begin.</p>
-
-        <ol>
+        <p><strong>Referral only.</strong> Fill to begin.</p>
+        <ol class="steps">
           <li>Be referred by a current member</li>
           <li>Attend intro evening</li>
           <li>Sign house rules</li>
           <li>Pay annual fee</li>
           <li>Get your member card</li>
         </ol>
-
         <form action="https://formspree.io/f/xgvrebdy" method="POST">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="_replyto" placeholder="Your Email" required>
-          <input type="text" name="referral" placeholder="Referring Member (Name)" required>
-          <textarea name="message" placeholder="Why do you want to join?" rows="5" required></textarea>
+          <input type="text" name="referral" placeholder="Referring Member" required>
+          <textarea name="message" placeholder="Why do you want to join?" rows="3" required></textarea>
           <button type="submit">Send Request</button>
         </form>
-
-        <p style="margin-top: 1.5rem;">You'll receive a reply at your email. We respect your privacy.</p>
+        <p style="margin-top:1rem; font-size:0.9rem; opacity:0.8;">
+          You'll receive a reply at your email. We respect your privacy.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:hello@lagunalounge.club">hello@lagunalounge.club</a></p>
+    <p>© 2025 Laguna Lounge CSC · <a href="mailto:hello@lagunalounge.club">hello@lagunalounge.club</a></p>
   </footer>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('success') === 'true') {
-      alert('Thank you! Your request was sent. We’ll contact you soon.');
-      window.history.replaceState({}, document.title, "/");
+    if (new URLSearchParams(location.search).get('success') === 'true') {
+      alert('Thank you! We’ll contact you soon.');
+      history.replaceState({}, '', '/');
     }
   </script>
 </body>
