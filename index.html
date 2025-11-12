@@ -1,4 +1,3 @@
-<! Käfig
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +67,7 @@
     .bg-white { background: white; }
     .bg-light { background: #f9f9f9; }
 
-    /* CARDS - PERFECTLY ALIGNED + IMAGES */
+    /* CARDS - IMAGES + TEXT FULLY VISIBLE */
     .features-grid {
       display: grid;
       gap: 2rem;
@@ -84,7 +83,7 @@
       transition: transform 0.3s, box-shadow 0.3s;
       display: flex;
       flex-direction: column;
-      height: 100%; /* Equal height */
+      height: 100%;
     }
     .feature-card:hover {
       transform: translateY(-10px);
@@ -97,21 +96,24 @@
       border-bottom: 5px solid var(--yellow);
     }
     .feature-content {
-      padding: 2rem;
+      padding: 2.2rem;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
     .feature-content h3 {
-      font-size: 1.8rem;
-      margin: 0.8rem 0;
+      font-size: 1.9rem;
+      margin: 0 0 0.8rem 0;
       color: var(--navy);
+      line-height: 1.2;
     }
     .feature-content p {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: #444;
       margin: 0;
+      line-height: 1.6;
+      font-weight: 500;
     }
 
     /* FORM SECTION */
@@ -153,7 +155,7 @@
     }
     button {
       background: var(--yellow); color: var(--navy); border: none; 
-      padding: 18px; width: 100%; font-weight: 600; font-size: 1.2rem; 
+      padding: 18px; | width: 100%; font-weight: 600; font-size: 1.2rem; 
       border-radius: 10px; cursor: pointer; margin-top: 1rem;
       box-shadow: 0 6px 20px rgba(255,179,0,0.3);
     }
@@ -199,7 +201,7 @@
     </div>
   </section>
 
-  <!-- FEATURES WITH IMAGES -->
+  <!-- FEATURES WITH FULL IMAGES -->
   <section class="section bg-light">
     <div class="container">
       <div class="features-grid">
