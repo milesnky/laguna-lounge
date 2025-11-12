@@ -1,3 +1,4 @@
+<! Käfig
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,16 +68,53 @@
     .bg-white { background: white; }
     .bg-light { background: #f9f9f9; }
 
-    .grid { display: grid; gap: 2rem; margin-top: 3rem; }
-    @media (min-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); } }
-    .card { 
-      background: white; padding: 3rem 2rem; border-radius: 16px; 
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08); text-align: center;
+    /* CARDS - PERFECTLY ALIGNED + IMAGES */
+    .features-grid {
+      display: grid;
+      gap: 2rem;
+      margin-top: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-    .card h3 { font-size: 1.8rem; margin: 1rem 0; color: var(--navy); }
-    .card p { font-size: 1.1rem; color: #444; }
+    .feature-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      height: 100%; /* Equal height */
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .feature-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 5px solid var(--yellow);
+    }
+    .feature-content {
+      padding: 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .feature-content h3 {
+      font-size: 1.8rem;
+      margin: 0.8rem 0;
+      color: var(--navy);
+    }
+    .feature-content p {
+      font-size: 1.1rem;
+      color: #444;
+      margin: 0;
+    }
 
-    /* FORM SECTION - CLEAN NUMBERED LIST */
+    /* FORM SECTION */
     .form-section { 
       background: var(--sand); padding: 6rem 1rem;
     }
@@ -84,7 +122,6 @@
     .form-container h2 { font-size: 2.8rem; color: var(--navy); }
     .form-container p { font-size: 1.2rem; color: #333; margin-bottom: 2rem; }
     
-    /* CLEAN NUMBERED LIST - NO 1.1. GLITCH */
     .form-container ol {
       counter-reset: item;
       list-style: none;
@@ -162,24 +199,35 @@
     </div>
   </section>
 
-  <!-- FEATURES -->
+  <!-- FEATURES WITH IMAGES -->
   <section class="section bg-light">
     <div class="container">
-      <div class="grid">
-        <div class="card">
-          <div style="font-size: 3.5rem; margin-bottom: 1rem;">Private & Safe</div>
-          <h3>Private & Safe</h3>
-          <p>Members-only. ID check. Zero tolerance for disrespect. No tourists.</p>
+      <div class="features-grid">
+        <!-- CARD 1 -->
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Private & Safe" class="feature-img">
+          <div class="feature-content">
+            <h3>Private & Safe</h3>
+            <p>Members-only. ID check. Zero tolerance for disrespect. No tourists.</p>
+          </div>
         </div>
-        <div class="card">
-          <div style="font-size: 3.5rem; margin-bottom: 1rem;">Culture & Art</div>
-          <h3>Culture & Creativity</h3>
-          <p>Music, art, workshops, cinema, gaming — a true cultural hub.</p>
+
+        <!-- CARD 2 -->
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1519389950474-72c90fffd1d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Culture & Creativity" class="feature-img">
+          <div class="feature-content">
+            <h3>Culture & Creativity</h3>
+            <p>Music, art, workshops, cinema, gaming — a true cultural hub.</p>
+          </div>
         </div>
-        <div class="card">
-          <div style="font-size: 3.5rem; margin-bottom: 1rem;">Education</div>
-          <h3>Education & Wellness</h3>
-          <p>Harm reduction, science talks, yoga, mental health support.</p>
+
+        <!-- CARD 3 -->
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Education & Wellness" class="feature-img">
+          <div class="feature-content">
+            <h3>Education & Wellness</h3>
+            <p>Harm reduction, science talks, yoga, mental health support.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -192,7 +240,6 @@
         <h2>Get in Touch</h2>
         <p><strong>Referral only.</strong> Fill out to begin.</p>
 
-        <!-- CLEAN NUMBERED LIST -->
         <ol>
           <li>Be referred by a current member</li>
           <li>Attend intro evening</li>
