@@ -4,115 +4,112 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Laguna Lounge CSC</title>
-  <!-- CRISP, READABLE FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- CRISP, HIGH-CONTRAST FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --navy: #0A1D37;
       --teal: #4FC3F7;
       --yellow: #FFB300;
       --sand: #FFF8E1;
+      --dark-text: #111;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { 
-      font-family: 'Poppins', sans-serif; 
-      background: var(--sand); 
-      color: #222; 
+      font-family: 'Open Sans', sans-serif; 
+      background: white; 
+      color: var(--dark-text); 
       line-height: 1.8; 
-      font-size: 17px;
+      font-size: 18px;
     }
     h1, h2, h3 { 
-      font-family: 'Lora', serif; 
+      font-family: 'Roboto', sans-serif; 
       color: var(--navy); 
-      margin-bottom: 1rem; 
       font-weight: 700;
     }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
     .text-center { text-align: center; }
 
-    /* TOP STICKY NAV */
+    /* TOP NAVIGATION - DARK ON WHITE */
     nav {
+      background: var(--navy); padding: 1.5rem 0; text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       position: sticky; top: 0; z-index: 1000;
-      background: var(--navy); padding: 1.2rem 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    nav .container {
-      display: flex; justify-content: center; gap: 2.5rem;
     }
     nav a {
-      color: white; font-weight: 600; text-decoration: none;
-      font-size: 1.1rem; letter-spacing: 0.5px;
-      transition: 0.3s;
+      color: white; margin: 0 1.5rem; font-weight: 600; 
+      text-decoration: none; font-size: 1.1rem;
     }
     nav a:hover { color: var(--teal); }
 
-    .btn {
-      display: inline-block; padding: 16px 40px; font-weight: 600;
-      border-radius: 10px; font-size: 1.15rem; text-decoration: none;
-      background: var(--yellow); color: var(--navy); 
-      box-shadow: 0 4px 15px rgba(255,179,0,0.3);
-      transition: 0.3s;
-    }
-    .btn:hover { background: var(--teal); color: white; transform: translateY(-2px); }
-
+    /* HERO - DARK TEXT ON SAND */
     .hero {
-      min-height: 100vh; display: flex; align-items: center; justify-content: center;
-      background: linear-gradient(to bottom right, var(--navy), #1e3a5f); 
-      color: white; text-align: center; padding: 3rem 1rem;
+      background: var(--sand); padding: 6rem 1rem; text-align: center;
     }
     .logo { 
-      width: 230px; border-radius: 50%; border: 8px solid white; 
-      box-shadow: 0 20px 40px rgba(0,0,0,0.35); margin-bottom: 1.8rem;
+      width: 240px; border-radius: 50%; border: 10px solid white; 
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2); margin-bottom: 2rem;
     }
+    .hero h1 {
+      font-size: 4.2rem; color: var(--navy); margin: 1rem 0;
+    }
+    .hero p {
+      font-size: 1.4rem; color: #333; max-width: 800px; margin: 1.5rem auto;
+    }
+    .btn {
+      display: inline-block; padding: 16px 44px; font-weight: 600;
+      background: var(--yellow); color: var(--navy); border-radius: 12px;
+      font-size: 1.2rem; text-decoration: none; margin-top: 1rem;
+      box-shadow: 0 6px 20px rgba(255,179,0,0.3);
+    }
+    .btn:hover { background: var(--teal); color: white; }
 
-    .section { padding: 6rem 0; }
+    .section { padding: 5rem 0; }
     .bg-white { background: white; }
-    .bg-sand { background: var(--sand); }
+    .bg-light { background: #f9f9f9; }
 
-    .grid { display: grid; gap: 2.5rem; margin-top: 3rem; }
+    .grid { display: grid; gap: 2rem; margin-top: 3rem; }
     @media (min-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); } }
     .card { 
-      background: white; padding: 3rem 2rem; border-radius: 18px; 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align: center;
-      transition: transform 0.3s;
+      background: white; padding: 3rem 2rem; border-radius: 16px; 
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08); text-align: center;
     }
-    .card:hover { transform: translateY(-8px); }
-    .card h3 { font-size: 1.7rem; margin: 1.2rem 0; }
-    .card p { font-size: 1.05rem; color: #444; }
+    .card h3 { font-size: 1.8rem; margin: 1rem 0; color: var(--navy); }
+    .card p { font-size: 1.1rem; color: #444; }
 
     .form-section { 
-      background: linear-gradient(to top, var(--navy), #1e3a5f); 
-      color: white; padding: 6rem 1rem;
+      background: var(--sand); padding: 6rem 1rem;
     }
-    .form-container { max-width: 520px; margin: 0 auto; }
+    .form-container { max-width: 550px; margin: 0 auto; }
+    .form-container h2 { font-size: 2.8rem; color: var(--navy); }
+    .form-container p { font-size: 1.2rem; color: #333; margin-bottom: 2rem; }
     .form-container ol { 
-      text-align: left; margin: 2rem 0; font-size: 1rem; 
-      padding-left: 1.2rem;
+      text-align: left; margin: 2rem 0; font-size: 1.1rem; 
+      padding-left: 1.5rem; color: #222;
     }
     input, textarea {
       width: 100%; padding: 16px; margin: 12px 0; 
-      border: 1px solid #ddd; border-radius: 10px; 
-      font-family: 'Poppins', sans-serif; font-size: 1rem;
-      background: white; color: #222;
+      border: 2px solid #ccc; border-radius: 10px; 
+      font-size: 1.1rem; font-family: 'Open Sans', sans-serif;
     }
     button {
       background: var(--yellow); color: var(--navy); border: none; 
-      padding: 18px; width: 100%; font-weight: 600; font-size: 1.15rem; 
-      border-radius: 10px; cursor: pointer; margin-top: 1.2rem;
-      box-shadow: 0 4px 15px rgba(255,179,0,0.3);
+      padding: 18px; width: 100%; font-weight: 600; font-size: 1.2rem; 
+      border-radius: 10px; cursor: pointer; margin-top: 1rem;
+      box-shadow: 0 6px 20px rgba(255,179,0,0.3);
     }
-    button:hover { background: var(--teal); color: white; transform: translateY(-2px); }
+    button:hover { background: var(--teal); color: white; }
 
     footer { 
       background: var(--navy); color: white; text-align: center; 
-      padding: 2.2rem; font-size: 1rem;
+      padding: 2.5rem; font-size: 1rem;
     }
     footer a { color: var(--teal); text-decoration: underline; }
   </style>
 </head>
 <body>
 
-  <!-- TOP STICKY NAV -->
+  <!-- TOP NAVIGATION -->
   <nav>
     <div class="container">
       <a href="index.html">Home</a>
@@ -126,10 +123,8 @@
   <section class="hero">
     <div class="container">
       <img src="logo.png" alt="Laguna Lounge Logo" class="logo">
-      <h1 style="font-size: 4rem; line-height: 1.1;">Laguna Lounge CSC</h1>
-      <p style="font-size: 1.4rem; margin: 1.8rem 0; max-width: 800px;">
-        Private Members Social Club · Community · Culture · Responsibility
-      </p>
+      <h1>Laguna Lounge CSC</h1>
+      <p>Private Members Social Club · Community · Culture · Responsibility</p>
       <a href="#join" class="btn">Become a Member</a>
     </div>
   </section>
@@ -137,8 +132,8 @@
   <!-- MISSION -->
   <section class="section bg-white">
     <div class="container text-center">
-      <h2 style="font-size: 2.8rem;">A Private Haven for Conscious Living</h2>
-      <p style="max-width: 850px; margin: 1.8rem auto; font-size: 1.2rem;">
+      <h2>A Private Haven for Conscious Living</h2>
+      <p style="max-width: 850px; margin: 1.8rem auto;">
         We are a <strong>registered asociación cultural</strong> operating in Spain's legally tolerated framework. 
         Our mission is <strong>community, creativity, and well-being</strong> — not consumption.
       </p>
@@ -146,7 +141,7 @@
   </section>
 
   <!-- FEATURES -->
-  <section class="section bg-sand">
+  <section class="section bg-light">
     <div class="container">
       <div class="grid">
         <div class="card">
@@ -171,10 +166,10 @@
   <!-- CONTACT FORM -->
   <section id="join" class="form-section">
     <div class="container">
-      <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">Get in Touch</h2>
-      <p style="margin-bottom: 2.2rem; font-size: 1.2rem;"><strong>Referral only.</strong> Fill out to begin.</p>
-
       <div class="form-container">
+        <h2>Get in Touch</h2>
+        <p><strong>Referral only.</strong> Fill out to begin.</p>
+
         <ol>
           <li>1. Be referred by a current member</li>
           <li>2. Attend intro evening</li>
@@ -191,7 +186,7 @@
           <button type="submit">Send Request</button>
         </form>
 
-        <p style="margin-top: 1.8rem; font-size: 0.95rem;">You'll receive a reply at your email. We respect your privacy.</p>
+        <p style="margin-top: 1.5rem;">You'll receive a reply at your email. We respect your privacy.</p>
       </div>
     </div>
   </section>
