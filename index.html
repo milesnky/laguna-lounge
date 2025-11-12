@@ -20,14 +20,6 @@
   </style>
 </head>
 <body class="text-gray-800">
-  <nav class="py-4 bg-[var(--navy)] text-white text-center">
-  <div class="max-w-6xl mx-auto flex justify-center space-x-6">
-    <a href="index.html" class="hover:text-[var(--teal)] font-bold">Home</a>
-    <a href="about.html" class="hover:text-[var(--teal)] font-bold">About</a>
-    <a href="activities.html" class="hover:text-[var(--teal)] font-bold">Activities</a>
-    <a href="join.html" class="hover:text-[var(--teal)] font-bold">Join</a>
-  </div>
-</nav>
   <!-- HERO -->
   <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-[var(--navy)] to-[#1e3a5f] text-white px-6">
     <div class="text-center max-w-3xl">
@@ -37,6 +29,16 @@
       <a href="#join" class="btn bg-[var(--yellow)] hover:bg-[var(--teal)] text-[var(--navy)] font-bold text-lg px-8 py-3">Become a Member</a>
     </div>
   </section>
+
+  <!-- NAVIGATION -->
+  <nav class="py-4 bg-[var(--navy)] text-white text-center">
+    <div class="max-w-6xl mx-auto flex justify-center space-x-6">
+      <a href="index.html" class="hover:text-[var(--teal)] font-bold">Home</a>
+      <a href="about.html" class="hover:text-[var(--teal)] font-bold">About</a>
+      <a href="activities.html" class="hover:text-[var(--teal)] font-bold">Activities</a>
+      <a href="join.html" class="hover:text-[var(--teal)] font-bold">Join</a>
+    </div>
+  </nav>
 
   <!-- MISSION -->
   <section class="py-20 px-6 bg-white">
@@ -53,17 +55,17 @@
   <section class="py-20 px-6 bg-[var(--sand)]">
     <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
       <div class="bg-white p-8 rounded-xl shadow-lg text-center">
-        <div class="text-5xl mb-4">🔒</div>
+        <div class="text-5xl mb-4">Private & Safe</div>
         <h3 class="text-2xl font-bold text-[var(--navy)] mb-3">Private & Safe</h3>
         <p>Members-only. ID check. Zero tolerance for disrespect. No tourists.</p>
       </div>
       <div class="bg-white p-8 rounded-xl shadow-lg text-center">
-        <div class="text-5xl mb-4">🎨</div>
+        <div class="text-5xl mb-4">Culture & Art</div>
         <h3 class="text-2xl font-bold text-[var(--navy)] mb-3">Culture & Creativity</h3>
         <p>Music, art, workshops, cinema, gaming — a true cultural hub.</p>
       </div>
       <div class="bg-white p-8 rounded-xl shadow-lg text-center">
-        <div class="text-5xl mb-4">🧠</div>
+        <div class="text-5xl mb-4">Education</div>
         <h3 class="text-2xl font-bold text-[var(--navy)] mb-3">Education & Wellness</h3>
         <p>Harm reduction, science talks, yoga, mental health support.</p>
       </div>
@@ -75,6 +77,14 @@
     <div class="max-w-2xl mx-auto text-center">
       <h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
       <p class="text-lg mb-8"><strong>Referral only.</strong> Fill out to begin.</p>
+
+      <ol class="text-left space-y-3 mb-8 max-w-md mx-auto text-sm md:text-base">
+        <li>1. Be referred by a current member</li>
+        <li>2. Attend intro evening</li>
+        <li>3. Sign house rules</li>
+        <li>4. Pay annual fee</li>
+        <li>5. Get your member card</li>
+      </ol>
 
       <form action="https://formspree.io/f/xgvrebdy" method="POST" class="space-y-6 max-w-md mx-auto">
         <input type="text" name="name" placeholder="Your Name" required class="input input-bordered w-full bg-white text-gray-800">
@@ -90,14 +100,15 @@
 
   <!-- FOOTER -->
   <footer class="py-6 bg-[var(--navy)] text-white text-center">
-    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:lagunalounge.csc@gmail.com" class="underline">lagunalounge.csc@gmail.com</a></p>
+    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:hello@lagunalounge.club" class="underline">hello@lagunalounge.club</a></p>
   </footer>
 
-  <!-- Success Script -->
+  <!-- Success Alert -->
   <script>
     const params = new URLSearchParams(window.location.search);
     if (params.get('success') === 'true') {
       alert('Thank you! Your request was sent. We’ll contact you soon.');
+      window.history.replaceState({}, document.title, "/");
     }
   </script>
 </body>
