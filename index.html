@@ -35,7 +35,7 @@
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-4xl font-bold text-[var(--navy)] mb-6">A Private Haven for Conscious Living</h2>
       <p class="text-lg leading-relaxed max-w-3xl mx-auto">
-        We are a <strong>registered asociación cultural</strong> operating in Spain’s legally tolerated framework. 
+        We are a <strong>registered asociación cultural</strong> operating in Spain's legally tolerated framework. 
         Our mission is <strong>community, creativity, and well-being</strong> — not consumption.
       </p>
     </div>
@@ -45,17 +45,17 @@
   <section class="py-20 px-6 bg-[var(--sand)]">
     <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
       <div class="bg-white p-8 rounded-xl shadow-lg text-center">
-        <div class="text-5xl mb-4">Private & Safe</div>
+        <div class="text-5xl mb-4">🔒</div>
         <h3 class="text-2xl font-bold text-[var(--navy)] mb-3">Private & Safe</h3>
         <p>Members-only. ID check. Zero tolerance for disrespect. No tourists.</p>
       </div>
       <div class="bg-white p-8 rounded-xl shadow-lg text-center">
-        <div class="text-5xl mb-4">Culture & Art</div>
+        <div class="text-5xl mb-4">🎨</div>
         <h3 class="text-2xl font-bold text-[var(--navy)] mb-3">Culture & Creativity</h3>
         <p>Music, art, workshops, cinema, gaming — a true cultural hub.</p>
       </div>
       <div class="bg-white p-8 rounded-xl shadow-lg text-center">
-        <div class="text-5xl mb-4">Education</div>
+        <div class="text-5xl mb-4">🧠</div>
         <h3 class="text-2xl font-bold text-[var(--navy)] mb-3">Education & Wellness</h3>
         <p>Harm reduction, science talks, yoga, mental health support.</p>
       </div>
@@ -68,7 +68,7 @@
       <h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
       <p class="text-lg mb-8"><strong>Referral only.</strong> Fill out to begin.</p>
 
-      <form action="https://formspree.io/f/xgvrebdy" class="space-y-6">
+      <form action="https://formspree.io/f/xgvrebdy" method="POST" class="space-y-6 max-w-md mx-auto">
         <input type="text" name="name" placeholder="Your Name" required class="input input-bordered w-full bg-white text-gray-800">
         <input type="email" name="_replyto" placeholder="Your Email" required class="input input-bordered w-full bg-white text-gray-800">
         <input type="text" name="referral" placeholder="Referring Member (Name)" required class="input input-bordered w-full bg-white text-gray-800">
@@ -85,12 +85,11 @@
     <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:hello@lagunalounge.club" class="underline">hello@lagunalounge.club</a></p>
   </footer>
 
-  <!-- Formspree Script -->
+  <!-- Success Script -->
   <script>
-    // Optional: Show success message
     const params = new URLSearchParams(window.location.search);
-    if (params.get('success')) {
-      alert('Thank you! Your message was sent. We’ll contact you soon.');
+    if (params.get('success') === 'true') {
+      alert('Thank you! Your request was sent. We’ll contact you soon.');
     }
   </script>
 </body>
