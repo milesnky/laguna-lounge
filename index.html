@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Laguna Lounge CSC</title>
-  <!-- CRISP, HIGH-CONTRAST FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -30,7 +29,7 @@
     .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
     .text-center { text-align: center; }
 
-    /* TOP NAVIGATION - DARK ON WHITE */
+    /* TOP NAV */
     nav {
       background: var(--navy); padding: 1.5rem 0; text-align: center;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -42,7 +41,7 @@
     }
     nav a:hover { color: var(--teal); }
 
-    /* HERO - DARK TEXT ON SAND */
+    /* HERO */
     .hero {
       background: var(--sand); padding: 6rem 1rem; text-align: center;
     }
@@ -77,16 +76,39 @@
     .card h3 { font-size: 1.8rem; margin: 1rem 0; color: var(--navy); }
     .card p { font-size: 1.1rem; color: #444; }
 
+    /* FORM SECTION - CLEAN NUMBERED LIST */
     .form-section { 
       background: var(--sand); padding: 6rem 1rem;
     }
     .form-container { max-width: 550px; margin: 0 auto; }
     .form-container h2 { font-size: 2.8rem; color: var(--navy); }
     .form-container p { font-size: 1.2rem; color: #333; margin-bottom: 2rem; }
-    .form-container ol { 
-      text-align: left; margin: 2rem 0; font-size: 1.1rem; 
-      padding-left: 1.5rem; color: #222;
+    
+    /* CLEAN NUMBERED LIST - NO 1.1. GLITCH */
+    .form-container ol {
+      counter-reset: item;
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
     }
+    .form-container ol li {
+      counter-increment: item;
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      color: #222;
+      position: relative;
+      padding-left: 2.5rem;
+    }
+    .form-container ol li::before {
+      content: counter(item) ".";
+      font-weight: bold;
+      color: var(--navy);
+      position: absolute;
+      left: 0;
+      width: 2rem;
+      text-align: right;
+    }
+
     input, textarea {
       width: 100%; padding: 16px; margin: 12px 0; 
       border: 2px solid #ccc; border-radius: 10px; 
@@ -109,7 +131,7 @@
 </head>
 <body>
 
-  <!-- TOP NAVIGATION -->
+  <!-- TOP NAV -->
   <nav>
     <div class="container">
       <a href="index.html">Home</a>
@@ -170,12 +192,13 @@
         <h2>Get in Touch</h2>
         <p><strong>Referral only.</strong> Fill out to begin.</p>
 
+        <!-- CLEAN NUMBERED LIST -->
         <ol>
-          <li>1. Be referred by a current member</li>
-          <li>2. Attend intro evening</li>
-          <li>3. Sign house rules</li>
-          <li>4. Pay annual fee</li>
-          <li>5. Get your member card</li>
+          <li>Be referred by a current member</li>
+          <li>Attend intro evening</li>
+          <li>Sign house rules</li>
+          <li>Pay annual fee</li>
+          <li>Get your member card</li>
         </ol>
 
         <form action="https://formspree.io/f/xgvrebdy" method="POST">
