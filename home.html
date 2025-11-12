@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laguna Lounge CSC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+  <style>
+    :root { --navy: #0A1D37; --teal: #4FC3F7; --yellow: #FFB300; --sand: #FFF8E1; }
+    body { font-family: 'Open Sans', sans-serif; background: var(--sand); }
+    h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+    .logo { width: 200px; }
+  </style>
+</head>
+<body class="text-gray-800">
+  <header class="hero min-h-screen bg-gradient-to-br from-var(--navy) to-#1e3a5f text-white px-6">
+    <div class="hero-content text-center">
+      <div class="max-w-lg">
+        <img src="logo.png" alt="Laguna Lounge Logo" class="logo mx-auto mb-6 rounded-full shadow-2xl">
+        <h1 class="text-5xl font-bold mb-4">Laguna Lounge CSC</h1>
+        <p class="py-6 text-lg">Private, non-profit cultural association dedicated to responsible lifestyles, creativity, community growth, and well-being.</p>
+        <a href="join.html" class="btn bg-var(--yellow) hover:bg-var(--teal) text-var(--navy) font-bold text-lg px-8 py-3">Become a Member</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-var(--navy) mb-6">Our Mission</h2>
+      <p class="text-lg leading-relaxed max-w-3xl mx-auto">We operate in Spain’s legally tolerated framework as an asociación cultural. Access is members-only, with strict rules for safety and respect.</p>
+      <a href="about.html" class="mt-8 btn bg-var(--teal) hover:bg-var(--yellow) text-white">Learn More About Us</a>
+    </div>
+  </section>
+
+  <section class="py-20 px-6 bg-var(--sand)">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-var(--navy) mb-6">Activities & Experiences</h2>
+      <p class="text-lg mb-8">From creativity to wellness, discover what we offer.</p>
+      <a href="activities.html" class="btn bg-var(--yellow) hover:bg-var(--teal) text-var(--navy)">Explore Activities</a>
+    </div>
+  </section>
+
+  <footer class="py-6 bg-var(--navy) text-white text-center">
+    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:hello@lagunalounge.club" class="underline">hello@lagunalounge.club</a></p>
+  </footer>
+</body>
+</html>
