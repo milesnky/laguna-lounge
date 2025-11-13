@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join Laguna Lounge CSC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
   <style>
@@ -15,32 +15,48 @@
   </style>
 </head>
 <body class="text-gray-800">
-  <header class="py-8 bg-var(--navy) text-white text-center">
+  <nav class="fixed top-0 w-full bg-[var(--navy)]/90 backdrop-blur-md z-50 text-white">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <img src="logo.png" alt="Laguna Lounge Logo" class="logo">
+      <div class="space-x-6">
+        <a href="index.html" class="hover:text-[var(--teal)] font-semibold">Home</a>
+        <a href="activities.html" class="hover:text-[var(--teal)] font-semibold">Activities</a>
+        <a href="join.html" class="hover:text-[var(--teal)] font-semibold">Join</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="pt-20 pb-16 bg-gradient-to-r from-[var(--yellow)] to-[var(--teal)] text-[var(--navy)] text-center">
     <img src="logo.png" alt="Laguna Lounge Logo" class="logo mx-auto mb-4 rounded-full shadow-2xl">
-    <h1 class="text-4xl font-bold">Join Laguna Lounge CSC</h1>
-    <a href="home.html" class="btn bg-var(--yellow) hover:bg-var(--teal) text-var(--navy) mt-4">Home</a>
+    <h1 class="text-5xl font-bold">Join Laguna Lounge CSC</h1>
   </header>
 
   <section class="py-20 px-6">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-var(--navy) mb-4">Membership by Referral Only</h2>
-      <p class="text-lg leading-relaxed mb-6">We keep our community small and trusted. Here's how to apply:</p>
-      <ol class="list-decimal pl-6 space-y-2">
-        <li>Be referred by an existing member</li>
+    <div class="max-w-4xl mx-auto space-y-8">
+      <h2 class="text-4xl font-bold text-[var(--navy)] mb-6">Membership by Referral Only</h2>
+      <p class="text-xl leading-relaxed mb-8">We keep our community small and trusted. Here's how to apply:</p>
+      <ol class="list-decimal pl-8 space-y-4 text-lg">
+        <li>Be referred by a current member</li>
         <li>Attend a monthly intro evening</li>
         <li>Review & sign our house rules</li>
-        <li>Pay annual fee </li>
+        <li>Pay annual fee</li>
         <li>Receive your member card</li>
       </ol>
-      <div class="alert alert-info my-8">
+      <div class="alert alert-info p-6 rounded-2xl shadow-lg">
         <strong>No walk-ins. No tourists. No exceptions.</strong>
       </div>
-      <a href="mailto:hello@lagunalounge.club" class="btn bg-var(--yellow) hover:bg-var(--teal) text-var(--navy)">Contact a Member for Referral</a>
+      <form action="https://formspree.io/f/xgvrebdy" method="POST" class="space-y-6 max-w-md mx-auto bg-white p-8 rounded-2xl shadow-xl">
+        <input type="text" name="name" placeholder="Your Name" required class="input input-bordered w-full py-4 text-lg">
+        <input type="email" name="_replyto" placeholder="Your Email" required class="input input-bordered w-full py-4 text-lg">
+        <input type="text" name="referral" placeholder="Referring Member (Name)" required class="input input-bordered w-full py-4 text-lg">
+        <textarea name="message" placeholder="Why do you want to join?" rows="4" required class="textarea textarea-bordered w-full py-4 text-lg"></textarea>
+        <button type="submit" class="btn bg-[var(--yellow)] hover:bg-[var(--teal)] text-[var(--navy)] font-bold text-xl w-full py-4">Send Inquiry</button>
+      </form>
     </div>
   </section>
 
-  <footer class="py-6 bg-var(--navy) text-white text-center">
-    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:hello@lagunalounge.club" class="underline">hello@lagunalounge.club</a></p>
+  <footer class="py-8 bg-[var(--navy)] text-white text-center">
+    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:lagunalounge.csc@gmail.com" class="underline hover:text-[var(--teal)]">lagunalounge.csc@gmail.com</a></p>
   </footer>
 </body>
 </html>
