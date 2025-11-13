@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Activities at Laguna Lounge CSC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Activities - Laguna Lounge CSC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
   <style>
@@ -15,68 +15,48 @@
   </style>
 </head>
 <body class="text-gray-800">
-  <header class="py-8 bg-[var(--navy)] text-white text-center">
+  <nav class="fixed top-0 w-full bg-[var(--navy)]/90 backdrop-blur-md z-50 text-white">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <img src="logo.png" alt="Laguna Lounge Logo" class="logo">
+      <div class="space-x-6">
+        <a href="index.html" class="hover:text-[var(--teal)] font-semibold">Home</a>
+        <a href="activities.html" class="hover:text-[var(--teal)] font-semibold">Activities</a>
+        <a href="join.html" class="hover:text-[var(--teal)] font-semibold">Join</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="pt-20 pb-16 bg-gradient-to-r from-[var(--teal)] to-[var(--navy)] text-white text-center">
     <img src="logo.png" alt="Laguna Lounge Logo" class="logo mx-auto mb-4 rounded-full shadow-2xl">
-    <h1 class="text-4xl font-bold">Activities & Experiences</h1>
-    <a href="index.html" class="btn bg-[var(--yellow)] hover:bg-[var(--teal)] text-[var(--navy)] mt-4">Home</a>
+    <h1 class="text-5xl font-bold">Activities & Experiences</h1>
   </header>
 
   <section class="py-20 px-6">
-    <div class="max-w-4xl mx-auto space-y-12">
+    <div class="max-w-4xl mx-auto space-y-16">
       <div>
-        <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">1. Private, Safe, and Inclusive Environment</h2>
-        <p class="text-lg leading-relaxed">Access is strictly members-only, with rigorous identity verification — no tourists or random walk-ins. Our house rules enforce zero tolerance for aggression, exploitation, or irresponsible behaviour. The space is discreet, respectful, and mature — more like a private cultural lounge than a public venue.</p>
+        <h2 class="text-4xl font-bold text-[var(--navy)] mb-6">Cultural & Creative Programming</h2>
+        <p class="text-xl leading-relaxed mb-8">Live DJ sessions, open mics, karaoke, painting jams, music production workshops.</p>
+        <img src="https://images.pexels.com/photos/1596447/pexels-photo-1596447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="DJ Session" class="w-full rounded-2xl shadow-xl mb-6">
+        <p class="text-lg">Studio corners for collaborative tracks, local art exhibitions, movie nights on culture and wellness.</p>
       </div>
 
       <div>
-        <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">2. Cultural and Creative Programming</h2>
-        <p class="text-lg leading-relaxed">As an asociación cultural, our activities are designed to enrich members creatively, socially, and intellectually.</p>
-        <ul class="list-disc pl-6 space-y-2">
-          <li>Music & Art: live DJ sessions, open mics, karaoke nights, painting jams, or even music production workshops.</li>
-          <img src="https://assets.milestoneinternet.com/cms-platform-for-marriott/yulwh-events-calendar/eventcalendar/vinyl-bar-dj-session-1741877745.jpg?time=1751147649" alt="Vinyl Bar DJ Session" class="w-full rounded-lg shadow-md mt-4">
-          <li>Studio Corners: some clubs have small music studios for members to collaborate or produce tracks together.</li>
-          <li>Exhibitions: local artists showcase their work in the club’s lounge.</li>
-          <li>Movie Nights: projections of documentaries or films relevant to culture, cannabis, or wellness.</li>
-          <li>Gaming & Recreation: chess, board games, chess, or trivia.</li>
-        </ul>
+        <h2 class="text-4xl font-bold text-[var(--navy)] mb-6">Education & Harm Reduction</h2>
+        <p class="text-xl leading-relaxed mb-8">Lectures on science, law, health; workshops on sustainability; guest speakers on rights and well-being.</p>
+        <img src="https://images.pexels.com/photos/4164922/pexels-photo-4164922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Workshop" class="w-full rounded-2xl shadow-xl mb-6">
       </div>
 
       <div>
-        <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">3. Education and Harm-Reduction Focus</h2>
-        <p class="text-lg leading-relaxed">We are responsible CSC that often includes educational activities to promote safe consumption and knowledge. Examples:</p>
-        <ul class="list-disc pl-6 space-y-2">
-          <li>Lectures or talks on harm reduction, cannabis science, or law.</li>
-          <li>Workshops on cultivation, extraction, or sustainability.</li>
-          <li>Guest speakers — doctors, lawyers, or activists explaining rights and health.</li>
-          <li>Public awareness campaigns (internally) about responsible use, mental health, or substance mixing.</li>
-        </ul>
-      </div>
-
-      <div>
-        <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">4. Community Events and Member Interaction</h2>
-        <p class="text-lg leading-relaxed">CSCs foster genuine connection. Members might gather for:</p>
-        <ul class="list-disc pl-6 space-y-2">
-          <li>Game nights, board games, chess, or trivia.</li>
-          <li>Food events, like tapas evenings, shared meals, or BBQs.</li>
-          <li>Wellness activities — yoga, meditation, or art therapy.</li>
-          <li>Volunteer or charity events, like collecting food or supporting local causes.</li>
-        </ul>
-      </div>
-
-      <div>
-        <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">5. A "Third Place" for Members</h2>
-        <p class="text-lg leading-relaxed">Sociologically, many members describe our CSC as a “third place” — not home, not work, but a safe and friendly environment where they can relax, be themselves, and connect with others. It’s calm, private, and community-driven, compared to nightlife venues or bars. Staff are trained to maintain a peaceful, respectful vibe. Members take part in maintaining the space, decorating, or organizing activities.</p>
-      </div>
-
-      <div>
-        <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">6. Purpose Beyond Cannabis</h2>
-        <p class="text-lg leading-relaxed">Ultimately, we position ourselves as social, cultural, and educational space where cannabis is one part of a broader, responsible community experience. We help reduce stigma by showing cannabis users can be healthy, creative, and responsible. We build micro-communities of artists, professionals, and locals. Promote alternative culture, sustainability, and mental well-being.</p>
+        <h2 class="text-4xl font-bold text-[var(--navy)] mb-6">Community & Wellness</h2>
+        <p class="text-xl leading-relaxed mb-8">Game nights, tapas evenings, yoga, meditation, charity drives.</p>
+        <img src="https://images.pexels.com/photos/3756846/pexels-photo-3756846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Yoga Circle" class="w-full rounded-2xl shadow-xl mb-6">
+        <img src="https://images.pexels.com/photos/1635131/pexels-photo-1635131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Game Night" class="w-full rounded-2xl shadow-xl">
       </div>
     </div>
   </section>
 
-  <footer class="py-6 bg-[var(--navy)] text-white text-center">
-    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:hello@lagunalounge.club" class="underline">hello@lagunalounge.club</a></p>
+  <footer class="py-8 bg-[var(--navy)] text-white text-center">
+    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:lagunalounge.csc@gmail.com" class="underline hover:text-[var(--teal)]">lagunalounge.csc@gmail.com</a></p>
   </footer>
 </body>
 </html>
