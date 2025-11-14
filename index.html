@@ -9,61 +9,167 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
   <style>
     :root { --navy: #0A1D37; --teal: #4FC3F7; --yellow: #FFB300; --sand: #FFF8E1; }
-    body { font-family: 'Open Sans', sans-serif; background: var(--sand); line-height: 1.6; color: #333; }
+    body { font-family: 'Open Sans', sans-serif; background: var(--sand); color: #333; line-height: 1.7; }
     h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: var(--navy); }
-    .logo { width: 200px; border-radius: 50%; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+    .logo { width: 200px; border-radius: 50%; border: 5px solid white; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
     .hero { background: linear-gradient(135deg, var(--navy), var(--teal)); }
-    .card { transition: box-shadow 0.3s ease; }
-    .card:hover { box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+    .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+    nav { transition: background 0.3s ease; }
+    nav.scrolled { background: rgba(10, 29, 55, 0.95) !important; }
   </style>
 </head>
-<body>
-  <nav class="fixed top-0 w-full bg-[var(--navy)] text-white shadow-lg z-50">
+<body class="text-gray-800">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full bg-[var(--navy)] text-white z-50 shadow-lg">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <img src="logo.png" alt="Laguna Lounge Logo" class="logo">
-      <div class="space-x-6 font-medium">
-        <a href="index.html" class="hover:text-[var(--yellow)]">Home</a>
-        <a href="about.html" class="hover:text-[var(--yellow)]">About</a>
-        <a href="activities.html" class="hover:text-[var(--yellow)]">Activities</a>
-        <a href="join.html" class="hover:text-[var(--yellow)]">Join</a>
+      <div class="space-x-8 text-lg font-medium">
+        <a href="#home" class="hover:text-[var(--yellow)]">Home</a>
+        <a href="#mission" class="hover:text-[var(--yellow)]">Mission</a>
+        <a href="#features" class="hover:text-[var(--yellow)]">Features</a>
+        <a href="#activities" class="hover:text-[var(--yellow)]">Activities</a>
+        <a href="#join" class="hover:text-[var(--yellow)]">Join</a>
       </div>
     </div>
   </nav>
 
-  <section class="hero min-h-screen flex items-center justify-center text-white px-6 pt-20">
+  <!-- HERO -->
+  <section id="home" class="hero min-h-screen flex items-center justify-center text-white px-6 pt-20">
     <div class="text-center max-w-4xl">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">Laguna Lounge CSC</h1>
-      <p class="text-xl md:text-2xl mb-8">Private Members Social Club · Community · Culture · Responsibility</p>
-      <a href="join.html" class="btn bg-[var(--yellow)] hover:bg-[var(--teal)] text-[var(--navy)] text-lg px-10 py-4 rounded-full font-bold">Join the Movement</a>
+      <h1 class="text-6xl md:text-7xl font-bold mb-6 drop-shadow-lg">Laguna Lounge CSC</h1>
+      <p class="text-2xl mb-10 font-light">Private Members Social Club · Community · Culture · Responsibility</p>
+      <a href="#join" class="btn bg-[var(--yellow)] hover:bg-white text-[var(--navy)] font-bold text-xl px-12 py-4 rounded-full shadow-xl">Join the Movement</a>
     </div>
   </section>
 
-  <section class="py-20 px-6 bg-white">
+  <!-- MISSION -->
+  <section id="mission" class="py-24 px-6 bg-white">
     <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-8">A Private Haven for Conscious Living</h2>
-      <p class="text-lg max-w-3xl mx-auto mb-12">We are a registered <strong>asociación cultural</strong> in Spain. Our focus: community, creativity, well-being — not consumption. A safe space for adults to connect and thrive.</p>
+      <h2 class="text-5xl font-bold text-[var(--navy)] mb-8">A Private Haven for Conscious Living</h2>
+      <p class="text-xl max-w-3xl mx-auto text-gray-700">
+        We are a registered <strong>asociación cultural</strong> in Spain. Our focus: <strong>community, creativity, well-being</strong> — not consumption. A safe, mature space for adults to connect, create, and grow.
+      </p>
     </div>
   </section>
 
-  <section class="py-20 px-6 bg-[var(--sand)]">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-      <div class="card bg-white p-8 rounded-xl text-center">
-        <h3 class="text-2xl font-bold mb-3">Private & Safe</h3>
-        <p>Members-only. ID verified. Zero tolerance for disrespect. No tourists.</p>
+  <!-- FEATURES -->
+  <section id="features" class="py-24 px-6 bg-gradient-to-b from-[#f0f4f8] to-white">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+      <div class="card bg-white p-10 rounded-2xl shadow-lg text-center">
+        <div class="text-6xl mb-5">Private & Safe</div>
+        <h3 class="text-3xl font-bold text-[var(--navy)] mb-3">Private & Safe</h3>
+        <p class="text-gray-600">Members-only. ID verified. Zero tolerance. No tourists.</p>
       </div>
-      <div class="card bg-white p-8 rounded-xl text-center">
-        <h3 class="text-2xl font-bold mb-3">Culture & Creativity</h3>
-        <p>Music, art, workshops, cinema, gaming — a true cultural hub.</p>
+      <div class="card bg-white p-10 rounded-2xl shadow-lg text-center">
+        <div class="text-6xl mb-5">Culture & Creativity</div>
+        <h3 class="text-3xl font-bold text-[var(--navy)] mb-3">Culture & Creativity</h3>
+        <p class="text-gray-600">Music, art, workshops, cinema, gaming — a true cultural hub.</p>
       </div>
-      <div class="card bg-white p-8 rounded-xl text-center">
-        <h3 class="text-2xl font-bold mb-3">Education & Wellness</h3>
-        <p>Harm reduction, science talks, yoga, mental health support.</p>
+      <div class="card bg-white p-10 rounded-2xl shadow-lg text-center">
+        <div class="text-6xl mb-5">Education & Wellness</div>
+        <h3 class="text-3xl font-bold text-[var(--navy)] mb-3">Education & Wellness</h3>
+        <p class="text-gray-600">Harm reduction, science talks, yoga, mental health support.</p>
       </div>
     </div>
   </section>
 
-  <footer class="py-8 bg-[var(--navy)] text-white text-center">
+  <!-- ACTIVITIES -->
+  <section id="activities" class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-5xl font-bold text-center text-[var(--navy)] mb-16">Activities & Experiences</h2>
+
+      <div class="space-y-20">
+        <!-- DJ -->
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h3 class="text-3xl font-bold text-[var(--navy)] mb-4">Live DJ & Vinyl Nights</h3>
+            <p class="text-lg text-gray-700">Open mics, DJ sets, vinyl swaps. Members bring records and vibe.</p>
+          </div>
+          <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="DJ Session" class="w-full h-80 object-cover rounded-2xl shadow-xl">
+        </div>
+
+        <!-- Art -->
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <img src="https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Art Jam" class="w-full h-80 object-cover rounded-2xl shadow-xl order-last md:order-first">
+          <div>
+            <h3 class="text-3xl font-bold text-[var(--navy)] mb-4">Art Jams & Exhibitions</h3>
+            <p class="text-lg text-gray-700">Painting sessions, live sketching, local artist showcases.</p>
+          </div>
+        </div>
+
+        <!-- Wellness -->
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h3 class="text-3xl font-bold text-[var(--navy)] mb-4">Yoga & Mindfulness</h3>
+            <p class="text-lg text-gray-700">Weekly yoga, meditation circles, breathwork for clarity.</p>
+          </div>
+          <img src="https://images.pexels.com/photos/3823030/pexels-photo-3823030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Yoga" class="w-full h-80 object-cover rounded-2xl shadow-xl">
+        </div>
+
+        <!-- Social -->
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <img src="https://images.pexels.com/photos/278918/pexels-photo-278918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Game Night" class="w-full h-80 object-cover rounded-2xl shadow-xl order-last md:order-first">
+          <div>
+            <h3 class="text-3xl font-bold text-[var(--navy)] mb-4">Game Nights & Tapas</h3>
+            <p class="text-lg text-gray-700">Chess, trivia, shared meals. Real connection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN -->
+  <section id="join" class="py-24 px-6 bg-[var(--navy)] text-white">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-5xl font-bold mb-8">Get in Touch</h2>
+      <p class="text-xl mb-10">Referral only. Begin your journey.</p>
+
+      <form action="https://formspree.io/f/xgvrebdy" method="POST" class="space-y-6 bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
+        <input type="text" name="name" placeholder="Your Name" required class="input input-bordered w-full bg-white text-gray-800 py-4 text-lg">
+        <input type="email" name="_replyto" placeholder="Your Email" required class="input input-bordered w-full bg-white text-gray-800 py-4 text-lg">
+        <input type="text" name="referral" placeholder="Referring Member" required class="input input-bordered w-full bg-white text-gray-800 py-4 text-lg">
+        <textarea name="message" placeholder="Why do you want to join?" rows="4" required class="textarea textarea-bordered w-full bg-white text-gray-800 py-4 text-lg"></textarea>
+        <button type="submit" class="btn bg-[var(--yellow)] hover:bg-white text-[var(--navy)] font-bold text-xl w-full py-4 rounded-full">Send Request</button>
+      </form>
+
+      <ol class="text-left space-y-3 mt-10 max-w-md mx-auto text-lg">
+        <li>Be referred by a current member</li>
+        <li>Attend intro evening</li>
+        <li>Sign house rules</li>
+        <li>Pay annual fee</li>
+        <li>Get your member card</li>
+      </ol>
+      <p class="mt-6 text-sm opacity-80">You'll receive a reply at your email. We respect your privacy.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 bg-[var(--navy)] text-white text-center border-t border-white/10">
     <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:lagunalounge.csc@gmail.com" class="underline hover:text-[var(--yellow)]">lagunalounge.csc@gmail.com</a></p>
   </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Nav shrink on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 100) {
+        nav.classList.add('py-2', 'shadow-xl');
+      } else {
+        nav.classList.remove('py-2', 'shadow-xl');
+      }
+    });
+  </script>
+
 </body>
 </html>
