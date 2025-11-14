@@ -9,54 +9,29 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
   <style>
     :root { --navy: #0A1D37; --teal: #4FC3F7; --yellow: #FFB300; --sand: #FFF8E1; }
-    body { font-family: 'Open Sans', sans-serif; background: var(--sand); }
+    body { font-family: 'Open Sans', sans-serif; background: #f8f9fa; margin: 0; }
     h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
-    .logo { width: 150px; }
+    .logo { width: 150px; border-radius: 50%; border: 4px solid var(--yellow); }
   </style>
 </head>
 <body class="text-gray-800">
-  <nav class="fixed top-0 w-full bg-[var(--navy)]/90 backdrop-blur-md z-50 text-white">
+  <nav class="fixed top-0 w-full bg-[var(--navy)] z-50 text-white shadow-lg">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <img src="logo.png" alt="Laguna Lounge Logo" class="logo">
-      <div class="space-x-6">
-        <a href="index.html" class="hover:text-[var(--teal)] font-semibold">Home</a>
-        <a href="activities.html" class="hover:text-[var(--teal)] font-semibold">Activities</a>
-        <a href="join.html" class="hover:text-[var(--teal)] font-semibold">Join</a>
+      <div class="space-x-8 text-lg font-medium">
+        <a href="index.html" class="hover:text-[var(--yellow)]">Home</a>
+        <a href="about.html" class="hover:text-[var(--yellow)]">About</a>
+        <a href="activities.html" class="hover:text-[var(--yellow)]">Activities</a>
+        <a href="join.html" class="hover:text-[var(--yellow)]">Join</a>
       </div>
     </div>
   </nav>
 
-  <header class="pt-20 pb-16 bg-gradient-to-r from-[var(--teal)] to-[var(--navy)] text-white text-center">
-    <img src="logo.png" alt="Laguna Lounge Logo" class="logo mx-auto mb-4 rounded-full shadow-2xl">
+  <header class="pt-32 pb-16 bg-gradient-to-r from-[#1a365d] to-[var(--teal)] text-white text-center">
     <h1 class="text-5xl font-bold">Activities & Experiences</h1>
   </header>
 
   <section class="py-20 px-6">
-    <div class="max-w-4xl mx-auto space-y-16">
-      <div>
-        <h2 class="text-4xl font-bold text-[var(--navy)] mb-6">Cultural & Creative Programming</h2>
-        <p class="text-xl leading-relaxed mb-8">Live DJ sessions, open mics, karaoke, painting jams, music production workshops.</p>
-        <img src="https://images.pexels.com/photos/1596447/pexels-photo-1596447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="DJ Session" class="w-full rounded-2xl shadow-xl mb-6">
-        <p class="text-lg">Studio corners for collaborative tracks, local art exhibitions, movie nights on culture and wellness.</p>
-      </div>
-
-      <div>
-        <h2 class="text-4xl font-bold text-[var(--navy)] mb-6">Education & Harm Reduction</h2>
-        <p class="text-xl leading-relaxed mb-8">Lectures on science, law, health; workshops on sustainability; guest speakers on rights and well-being.</p>
-        <img src="https://images.pexels.com/photos/4164922/pexels-photo-4164922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Workshop" class="w-full rounded-2xl shadow-xl mb-6">
-      </div>
-
-      <div>
-        <h2 class="text-4xl font-bold text-[var(--navy)] mb-6">Community & Wellness</h2>
-        <p class="text-xl leading-relaxed mb-8">Game nights, tapas evenings, yoga, meditation, charity drives.</p>
-        <img src="https://images.pexels.com/photos/3756846/pexels-photo-3756846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Yoga Circle" class="w-full rounded-2xl shadow-xl mb-6">
-        <img src="https://images.pexels.com/photos/1635131/pexels-photo-1635131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Game Night" class="w-full rounded-2xl shadow-xl">
-      </div>
-    </div>
-  </section>
-
-  <footer class="py-8 bg-[var(--navy)] text-white text-center">
-    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:lagunalounge.csc@gmail.com" class="underline hover:text-[var(--teal)]">lagunalounge.csc@gmail.com</a></p>
-  </footer>
-</body>
-</html>
+    <div class="max-w-6xl mx-auto space-y-20">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div
