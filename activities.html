@@ -9,73 +9,43 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
   <style>
     :root { --navy: #0A1D37; --teal: #4FC3F7; --yellow: #FFB300; --sand: #FFF8E1; }
-    body { font-family: 'Open Sans', sans-serif; background: #f8f9fa; margin: 0; }
-    h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
-    .logo { width: 150px; border-radius: 50%; border: 4px solid var(--yellow); }
-    img { border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+    body { font-family: 'Open Sans', sans-serif; background: linear-gradient(to bottom, var(--sand), white); }
+    h1, h2, h3 { font-family: 'Montserr at', sans-serif; }
+    .logo { width: 150px; }
   </style>
 </head>
 <body class="text-gray-800">
-  <nav class="fixed top-0 w-full bg-[var(--navy)] z-50 text-white shadow-lg">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <img src="logo.png" alt="Laguna Lounge Logo" class="logo">
-      <div class="space-x-8 text-lg font-medium">
-        <a href="index.html" class="hover:text-[var(--yellow)]">Home</a>
-        <a href="about.html" class="hover:text-[var(--yellow)]">About</a>
-        <a href="activities.html" class="hover:text-[var(--yellow)]">Activities</a>
-        <a href="join.html" class="hover:text-[var(--yellow)]">Join</a>
-      </div>
+  <header class="hero py-16 text-white flex items-center justify-center">
+    <div class="text-center">
+      <img src="logo.png" alt="Laguna Lounge Logo" class="logo mx-auto mb-6 rounded-full shadow-xl">
+      <h1 class="text-5xl font-bold mb-4">Activities & Experiences</h1>
+      <a href="index.html" class="btn bg-[var(--yellow)] hover:bg-[var(--teal)] text-[var(--navy)]">Home</a>
     </div>
-  </nav>
-
-  <header class="pt-32 pb-16 bg-gradient-to-r from-[#1a365d] to-[var(--teal)] text-white text-center">
-    <h1 class="text-5xl font-bold">Activities & Experiences</h1>
   </header>
 
   <section class="py-20 px-6">
-    <div class="max-w-6xl mx-auto space-y-20">
+    <div class="max-w-5xl mx-auto space-y-12">
+      <h2 class="text-4xl font-bold text-[var(--navy)] mb-8">Cultural and Creative Programming</h2>
+      <p class="text-lg">Live DJ sessions, open mics, karaoke nights, painting jams, music production workshops.</p>
+      <img src="https://assets.milestoneinternet.com/cms-platform-for-marriott/yulwh-events-calendar/eventcalendar/vinyl-bar-dj-session-1741877745.jpg?time=1751147649" alt="Vinyl Bar DJ Session" class="w-full rounded-lg shadow-md">
+      <p class="text-lg">Studio corners for collaboration, exhibitions of local artists, movie nights on culture and wellness, gaming & recreation like chess and trivia.</p>
 
-      <!-- 1. DJ & Music -->
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">Live Music & DJ Sessions</h2>
-          <p class="text-lg text-gray-700">Open mics, vinyl nights, and DJ sets in an intimate lounge setting. Members bring records, collaborate, and vibe.</p>
-        </div>
-        <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="DJ Vinyl Session" class="w-full h-80 object-cover">
-      </div>
+      <h2 class="text-4xl font-bold text-[var(--navy)] mb-8">Education and Harm-Reduction Focus</h2>
+      <p class="text-lg">Lectures on harm reduction, cannabis science, or law. Workshops on cultivation, extraction, or sustainability. Guest speakers — doctors, lawyers, or activists explaining rights and health. Public awareness campaigns (internally) about responsible use, mental health, or substance mixing.</p>
 
-      <!-- 2. Art & Creativity -->
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <img src="https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Art Workshop" class="w-full h-80 object-cover order-last md:order-first">
-        <div>
-          <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">Art Jams & Exhibitions</h2>
-          <p class="text-lg text-gray-700">Painting sessions, live sketching, and rotating exhibitions of local artists. Bring your canvas or just your ideas.</p>
-        </div>
-      </div>
+      <h2 class="text-4xl font-bold text-[var(--navy)] mb-8">Community Events and Member Interaction</h2>
+      <p class="text-lg">Game nights, board games, chess, or trivia. Food events, like tapas evenings, shared meals, or BBQs. Wellness activities — yoga, meditation, or art therapy. Volunteer or charity events, like collecting food or supporting local causes.</p>
 
-      <!-- 3. Wellness -->
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">Yoga & Mindfulness</h2>
-          <p class="text-lg text-gray-700">Weekly yoga, meditation circles, and breathwork. A calm corner for mental clarity and body balance.</p>
-        </div>
-        <img src="https://images.pexels.com/photos/3823030/pexels-photo-3823030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Yoga Circle" class="w-full h-80 object-cover">
-      </div>
+      <h2 class="text-4xl font-bold text-[var(--navy)] mb-8">A "Third Place" for Members</h2>
+      <p class="text-lg">Sociologically, many members describe our CSC as a “third place” — not home, not work, but a safe and friendly environment where they can relax, be themselves, and connect with others. It’s calm, private, and community-driven, compared to nightlife venues or bars. Staff are trained to maintain a peaceful, respectful vibe. Members take part in maintaining the space, decorating, or organizing activities.</p>
 
-      <!-- 4. Games & Social -->
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <img src="https://images.pexels.com/photos/278918/pexels-photo-278918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Game Night" class="w-full h-80 object-cover order-last md:order-first">
-        <div>
-          <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">Game Nights & Tapas</h2>
-          <p class="text-lg text-gray-700">Chess, board games, trivia, and shared tapas evenings. Real connection, no screens required.</p>
-        </div>
-      </div>
-
+      <h2 class="text-4xl font-bold text-[var(--navy)] mb-8">Purpose Beyond Cannabis</h2>
+      <p class="text-lg">Ultimately, we position ourselves as social, cultural, and educational space where cannabis is one part of a broader, responsible community experience. We help reduce stigma by showing cannabis users can be healthy, creative, and responsible. We build micro-communities of artists, professionals, and locals. Promote alternative culture, sustainability, and mental well-being.</p>
     </div>
   </section>
 
-  <footer class="py-8 bg-[var(--navy)] text-white text-center">
-    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:lagunalounge.csc@gmail.com" class="underline hover:text-[var(--yellow)]">lagunalounge.csc@gmail.com</a></p>
+  <footer class="py-6 bg-[var(--navy)] text-white text-center">
+    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:lagunalounge.csc@gmail.com" class="underline">lagunalounge.csc@gmail.com</a></p>
   </footer>
 </body>
 </html>
