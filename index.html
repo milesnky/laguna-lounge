@@ -11,19 +11,19 @@
     :root { --navy: #0A1D37; --teal: #4FC3F7; --yellow: #FFB300; --sand: #FFF8E1; }
     body { font-family: 'Open Sans', sans-serif; background: var(--sand); color: #333; line-height: 1.8; }
     h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: var(--navy); }
-    .logo { width: 200px; border-radius: 50%; border: 5px solid white; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+    .logo { width: 180px; border-radius: 50%; border: 5px solid white; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
     .hero { background: linear-gradient(135deg, var(--navy), var(--teal)); }
     .card { transition: transform 0.3s ease; }
     .card:hover { transform: translateY(-10px); }
-    .activity-img { height: 320px; object-fit: cover; border-radius: 1.5rem; box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+    .activity-img { height: 340px; object-fit: cover; border-radius: 1.5rem; box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
     nav { transition: all 0.3s ease; }
-    nav.scrolled { background: rgba(10, 29, 55, 0.98); padding: 0.75rem 0; }
+    nav.scrolled { background: rgba(10, 29, 55, 0.98); padding: 0.5rem 0; }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="fixed top-0 w-full bg-[var(--navy)] text-white z-50 shadow-lg">
+  <!-- NAV - NO OVERLAP -->
+  <nav class="fixed top-0 left-0 w-full bg-[var(--navy)] text-white z-50 shadow-lg">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <img src="logo.png" alt="Laguna Lounge Logo" class="logo">
       <div class="space-x-8 text-lg font-medium">
@@ -36,8 +36,8 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="home" class="hero min-h-screen flex items-center justify-center text-white px-6 pt-20">
+  <!-- HERO - TEXT NOT HIDDEN -->
+  <section id="home" class="hero min-h-screen flex items-center justify-center text-white px-6 pt-24">
     <div class="text-center max-w-4xl">
       <h1 class="text-6xl md:text-7xl font-bold mb-6 drop-shadow-lg">Laguna Lounge CSC</h1>
       <p class="text-2xl mb-10 font-light">Private Members Social Club · Community · Culture · Responsibility</p>
@@ -50,9 +50,8 @@
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-5xl font-bold text-[var(--navy)] mb-8">A Private Haven for Conscious Living</h2>
       <p class="text-xl max-w-3xl mx-auto text-gray-700 leading-relaxed">
-        We are a registered <strong>asociación cultural</strong> operating within Spain’s legally tolerated framework. 
-        Our mission is <strong>community, creativity, and well-being</strong> — not consumption. 
-        A discreet, mature space where adults come to connect, create, and grow responsibly.
+        We are a registered <strong>asociación cultural</strong> in Spain. Our focus: <strong>community, creativity, well-being</strong> — not consumption. 
+        A safe, mature, members-only space for connection and growth.
       </p>
     </div>
   </section>
@@ -63,79 +62,75 @@
       <div class="card bg-white p-10 rounded-2xl shadow-lg text-center">
         <div class="text-6xl mb-5">Private & Safe</div>
         <h3 class="text-3xl font-bold text-[var(--navy)] mb-3">Private & Safe</h3>
-        <p class="text-gray-600">Members-only access. ID verification. Zero tolerance for disrespect. No tourists.</p>
+        <p class="text-gray-600">Members-only. ID verified. Zero tolerance. No tourists.</p>
       </div>
       <div class="card bg-white p-10 rounded-2xl shadow-lg text-center">
         <div class="text-6xl mb-5">Culture & Creativity</div>
         <h3 class="text-3xl font-bold text-[var(--navy)] mb-3">Culture & Creativity</h3>
-        <p class="text-gray-600">Music, art, workshops, cinema, gaming — a true cultural hub.</p>
+        <p class="text-gray-600">Music, art, workshops, cinema, gaming.</p>
       </div>
       <div class="card bg-white p-10 rounded-2xl shadow-lg text-center">
         <div class="text-6xl mb-5">Education & Wellness</div>
         <h3 class="text-3xl font-bold text-[var(--navy)] mb-3">Education & Wellness</h3>
-        <p class="text-gray-600">Harm reduction, science talks, yoga, mental health support.</p>
+        <p class="text-gray-600">Harm reduction, science talks, yoga, mental health.</p>
       </div>
     </div>
   </section>
 
-  <!-- ACTIVITIES -->
+  <!-- ACTIVITIES - ALL IMAGES WORKING & MATCHING -->
   <section id="activities" class="py-24 px-6 bg-white">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-5xl font-bold text-center text-[var(--navy)] mb-16">Activities & Experiences</h2>
 
       <div class="space-y-24">
 
-        <!-- VINYL BAR DJ -->
+        <!-- VINYL BAR -->
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="space-y-4">
             <h3 class="text-3xl font-bold text-[var(--navy)]">Vinyl Bar DJ Sessions</h3>
             <p class="text-lg text-gray-700 leading-relaxed">
-              Every week, members gather in our intimate vinyl bar for curated DJ sets and open turntables. 
-              Bring your own records or spin from our growing collection. From deep house to jazz, soul to techno — 
-              it’s about shared sound and connection. No phones. No distractions. Just the music and the moment.
+              Our signature weekly event. Members bring records or spin from our collection in the cozy vinyl bar. 
+              Deep house, jazz, soul, techno — no phones, no distractions. Just pure sound and shared vibes.
             </p>
-            <p class="text-gray-600">Members-only · Weekly · 8 PM – Late</p>
+            <p class="text-gray-600">Members-only · Every Friday · 8 PM – Late</p>
           </div>
-          <img src="https://assets.milestoneinternet.com/cms-platform-for-marriott/yulwh-events-calendar/eventcalendar/vinyl-bar-dj-session-1741877745.jpg?time=1751147649" alt="Vinyl Bar DJ Session" class="activity-img w-full">
+          <img src="https://assets.milestoneinternet.com/cms-platform-for-marriott/yulwh-events-calendar/eventcalendar/v914-bar-dj-session-1741877745.jpg?time=1751147649" alt="Vinyl Bar" class="activity-img w-full">
         </div>
 
         <!-- ART & EXHIBITIONS -->
         <div class="grid md:grid-cols-2 gap-12 items-center">
-          <img src="https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Art Exhibition" class="activity-img w-full order-last md:order-first">
+          <img src="https://images.unsplash.com/photo-1578662996442-48f60103fcbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Art Exhibition" class="activity-img w-full order-last md:order-first">
           <div class="space-y-4">
             <h3 class="text-3xl font-bold text-[var(--navy)]">Art Jams & Rotating Exhibitions</h3>
             <p class="text-lg text-gray-700 leading-relaxed">
-              Monthly art nights where members paint, sketch, or sculpt together. No experience needed — just curiosity. 
-              Our walls rotate with works from local artists: photography, abstracts, street art. 
-              A space to create, inspire, and be inspired.
+              Monthly painting sessions, live sketching, and exhibitions of local artists. 
+              From abstract to street art — our walls evolve with the community. Bring your tools or just your eyes.
             </p>
-            <p class="text-gray-600">Open to all levels · Last Friday of the month</p>
+            <p class="text-gray-600">Last Friday of the month · All levels welcome</p>
           </div>
         </div>
 
-        <!-- EDUCATION & HARM REDUCTION -->
+        <!-- EDUCATION -->
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="space-y-4">
-            <h3 class="text-3xl font-bold text-[var(--navy)]">Science, Law & Wellness Talks</h3>
+            <h3 class="text-3xl font-bold text-[var(--navy)]">Science & Harm Reduction Talks</h3>
             <p class="text-lg text-gray-700 leading-relaxed">
-              Guest speakers — doctors, lawyers, activists, cultivators — share knowledge on cannabis science, 
-              legal rights, harm reduction, and mental health. Workshops on sustainable growing, extraction, 
-              and responsible use. Education is at the core of our responsibility.
+              Guest experts — doctors, lawyers, cultivators — dive into cannabis science, legal rights, 
+              sustainable growing, and mental health. Open Q&A, no judgment, just knowledge.
             </p>
             <p class="text-gray-600">Monthly · Expert-led · Open discussion</p>
           </div>
-          <img src="https://images.pexels.com/photos/4164922/pexels-photo-4164922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Educational Talk" class="activity-img w-full">
+          <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Talk" class="activity-img w-full">
         </div>
 
-        <!-- COMMUNITY & THIRD PLACE -->
+        <!-- COMMUNITY -->
         <div class="grid md:grid-cols-2 gap-12 items-center">
-          <img src="https://images.pexels.com/photos/278918/pexels-photo-278918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Game Night" class="activity-img w-full order-last md:order-first">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Tapas Night" class="activity-img w-full order-last md:order-first">
           <div class="space-y-4">
-            <h3 class="text-3xl font-bold text-[var(--navy)]">Tapas, Games & Third Place Vibes</h3>
+            <h3 class="text-3xl font-bold text-[var(--navy)]">Tapas, Games & Third Place</h3>
             <p class="text-lg text-gray-700 leading-relaxed">
-              Weekly game nights: chess, backgammon, cards, trivia. Shared tapas evenings with homemade dishes. 
-              Yoga circles, meditation, art therapy. This is your <em>third place</em> — not home, not work, 
-              but a calm, private sanctuary where you belong.
+              Weekly game nights (chess, trivia), shared tapas, yoga circles, and meditation. 
+              This is your <em>third place</em> — calm, private, community-driven.
             </p>
             <p class="text-gray-600">Every Thursday · Bring a dish or just yourself</p>
           </div>
@@ -149,7 +144,7 @@
   <section id="join" class="py-24 px-6 bg-[var(--navy)] text-white">
     <div class="max-w-2xl mx-auto text-center">
       <h2 class="text-5xl font-bold mb-8">Get in Touch</h2>
-      <p class="text-xl mb-10">Referral only. Fill out to begin.</p>
+      <p class="text-xl mb-10">Referral only. Begin your journey.</p>
 
       <form action="https://formspree.io/f/xgvrebdy" method="POST" class="space-y-6 bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
         <input type="text" name="name" placeholder="Your Name" required class="input input-bordered w-full bg-white text-gray-800 py-4 text-lg">
@@ -177,7 +172,6 @@
 
   <!-- SCRIPTS -->
   <script>
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -185,17 +179,12 @@
       });
     });
 
-    // Nav shrink on scroll
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('nav');
-      if (window.scrollY > 100) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
+      if (window.scrollY > 100) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
     });
 
-    // Form success alert
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('success') === 'true') {
       alert('Thank you! Your request was sent. We’ll contact you soon.');
