@@ -12,6 +12,7 @@
     body { font-family: 'Open Sans', sans-serif; background: #f8f9fa; margin: 0; }
     h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
     .logo { width: 150px; border-radius: 50%; border: 4px solid var(--yellow); }
+    img { border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
   </style>
 </head>
 <body class="text-gray-800">
@@ -33,5 +34,48 @@
 
   <section class="py-20 px-6">
     <div class="max-w-6xl mx-auto space-y-20">
+
+      <!-- 1. DJ & Music -->
       <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div
+        <div>
+          <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">Live Music & DJ Sessions</h2>
+          <p class="text-lg text-gray-700">Open mics, vinyl nights, and DJ sets in an intimate lounge setting. Members bring records, collaborate, and vibe.</p>
+        </div>
+        <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="DJ Vinyl Session" class="w-full h-80 object-cover">
+      </div>
+
+      <!-- 2. Art & Creativity -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Art Workshop" class="w-full h-80 object-cover order-last md:order-first">
+        <div>
+          <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">Art Jams & Exhibitions</h2>
+          <p class="text-lg text-gray-700">Painting sessions, live sketching, and rotating exhibitions of local artists. Bring your canvas or just your ideas.</p>
+        </div>
+      </div>
+
+      <!-- 3. Wellness -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">Yoga & Mindfulness</h2>
+          <p class="text-lg text-gray-700">Weekly yoga, meditation circles, and breathwork. A calm corner for mental clarity and body balance.</p>
+        </div>
+        <img src="https://images.pexels.com/photos/3823030/pexels-photo-3823030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Yoga Circle" class="w-full h-80 object-cover">
+      </div>
+
+      <!-- 4. Games & Social -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="https://images.pexels.com/photos/278918/pexels-photo-278918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Game Night" class="w-full h-80 object-cover order-last md:order-first">
+        <div>
+          <h2 class="text-3xl font-bold text-[var(--navy)] mb-4">Game Nights & Tapas</h2>
+          <p class="text-lg text-gray-700">Chess, board games, trivia, and shared tapas evenings. Real connection, no screens required.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="py-8 bg-[var(--navy)] text-white text-center">
+    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:lagunalounge.csc@gmail.com" class="underline hover:text-[var(--yellow)]">lagunalounge.csc@gmail.com</a></p>
+  </footer>
+</body>
+</html>
