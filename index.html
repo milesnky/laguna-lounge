@@ -9,20 +9,61 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
   <style>
     :root { --navy: #0A1D37; --teal: #4FC3F7; --yellow: #FFB300; --sand: #FFF8E1; }
-    body { font-family: 'Open Sans', sans-serif; background: linear-gradient(to bottom, var(--sand), white); }
-    h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
-    .logo { width: 200px; }
+    body { font-family: 'Open Sans', sans-serif; background: var(--sand); line-height: 1.6; color: #333; }
+    h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: var(--navy); }
+    .logo { width: 200px; border-radius: 50%; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
     .hero { background: linear-gradient(135deg, var(--navy), var(--teal)); }
+    .card { transition: box-shadow 0.3s ease; }
+    .card:hover { box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
   </style>
 </head>
-<body class="text-gray-800">
-  <header class="hero min-h-screen text-white flex items-center justify-center">
-    <div class="text-center">
-      <img src="logo.png" alt="Laguna Lounge Logo" class="logo mx-auto mb-6 rounded-full shadow-xl">
-      <h1 class="text-5xl font-bold mb-4">Laguna Lounge CSC</h1>
-      <p class="text-xl mb-8">Private Members Social Club · Community · Culture · Responsibility</p>
-      <a href="activities.html" class="btn bg-[var(--yellow)] hover:bg-[var(--teal)] text-[var(--navy)]">Explore Activities</a>
+<body>
+  <nav class="fixed top-0 w-full bg-[var(--navy)] text-white shadow-lg z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <img src="logo.png" alt="Laguna Lounge Logo" class="logo">
+      <div class="space-x-6 font-medium">
+        <a href="index.html" class="hover:text-[var(--yellow)]">Home</a>
+        <a href="about.html" class="hover:text-[var(--yellow)]">About</a>
+        <a href="activities.html" class="hover:text-[var(--yellow)]">Activities</a>
+        <a href="join.html" class="hover:text-[var(--yellow)]">Join</a>
+      </div>
     </div>
-  </header>
+  </nav>
+
+  <section class="hero min-h-screen flex items-center justify-center text-white px-6 pt-20">
+    <div class="text-center max-w-4xl">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">Laguna Lounge CSC</h1>
+      <p class="text-xl md:text-2xl mb-8">Private Members Social Club · Community · Culture · Responsibility</p>
+      <a href="join.html" class="btn bg-[var(--yellow)] hover:bg-[var(--teal)] text-[var(--navy)] text-lg px-10 py-4 rounded-full font-bold">Join the Movement</a>
+    </div>
+  </section>
+
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8">A Private Haven for Conscious Living</h2>
+      <p class="text-lg max-w-3xl mx-auto mb-12">We are a registered <strong>asociación cultural</strong> in Spain. Our focus: community, creativity, well-being — not consumption. A safe space for adults to connect and thrive.</p>
+    </div>
+  </section>
+
+  <section class="py-20 px-6 bg-[var(--sand)]">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <div class="card bg-white p-8 rounded-xl text-center">
+        <h3 class="text-2xl font-bold mb-3">Private & Safe</h3>
+        <p>Members-only. ID verified. Zero tolerance for disrespect. No tourists.</p>
+      </div>
+      <div class="card bg-white p-8 rounded-xl text-center">
+        <h3 class="text-2xl font-bold mb-3">Culture & Creativity</h3>
+        <p>Music, art, workshops, cinema, gaming — a true cultural hub.</p>
+      </div>
+      <div class="card bg-white p-8 rounded-xl text-center">
+        <h3 class="text-2xl font-bold mb-3">Education & Wellness</h3>
+        <p>Harm reduction, science talks, yoga, mental health support.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 bg-[var(--navy)] text-white text-center">
+    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:lagunalounge.csc@gmail.com" class="underline hover:text-[var(--yellow)]">lagunalounge.csc@gmail.com</a></p>
+  </footer>
 </body>
 </html>
