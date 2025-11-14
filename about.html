@@ -3,39 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Laguna Lounge CSC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <title>About - Laguna Lounge CSC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
   <style>
     :root { --navy: #0A1D37; --teal: #4FC3F7; --yellow: #FFB300; --sand: #FFF8E1; }
-    body { font-family: 'Open Sans', sans-serif; background: var(--sand); }
+    body { font-family: 'Open Sans', sans-serif; background: #f8f9fa; margin: 0; }
     h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
-    .logo { width: 150px; }
+    .logo { width: 150px; border-radius: 50%; border: 4px solid var(--yellow); }
   </style>
 </head>
 <body class="text-gray-800">
-  <header class="py-8 bg-var(--navy) text-white text-center">
-    <img src="logo.png" alt="Laguna Lounge Logo" class="logo mx-auto mb-4 rounded-full shadow-2xl">
-    <h1 class="text-4xl font-bold">About Laguna Lounge CSC</h1>
-    <a href="home.html" class="btn bg-var(--yellow) hover:bg-var(--teal) text-var(--navy) mt-4">Home</a>
+  <nav class="fixed top-0 w-full bg-[var(--navy)] z-50 text-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <img src="logo.png" alt="Laguna Lounge Logo" class="logo">
+      <div class="space-x-8 text-lg font-medium">
+        <a href="index.html" class="hover:text-[var(--yellow)]">Home</a>
+        <a href="about.html" class="hover:text-[var(--yellow)]">About</a>
+        <a href="activities.html" class="hover:text-[var(--yellow)]">Activities</a>
+        <a href="join.html" class="hover:text-[var(--yellow)]">Join</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="pt-32 pb-16 bg-gradient-to-r from-[var(--teal)] to-[var(--navy)] text-white text-center">
+    <h1 class="text-5xl font-bold">About Laguna Lounge CSC</h1>
   </header>
 
   <section class="py-20 px-6">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-var(--navy) mb-4">Our Purpose</h2>
-      <p class="text-lg leading-relaxed mb-6">Laguna Lounge CSC is a private, independent, non-profit cultural association dedicated to responsible lifestyles, creativity, community growth, and overall well-being. We exist in a legal grey area — tolerated under certain conditions, though not explicitly legalized by national law.</p>
-
-      <h2 class="text-3xl font-bold text-var(--navy) mb-4">The “Third Place”</h2>
-      <p class="text-lg leading-relaxed mb-6">Sociologically, many members describe our CSC as a “third place” — not home, not work, but a safe and friendly environment where they can relax, be themselves, and connect with others. It’s calm, private, and community-driven, compared to nightlife venues or bars. Staff are trained to maintain a peaceful, respectful vibe. Members take part in maintaining the space, decorating, or organizing activities.</p>
-
-      <h2 class="text-3xl font-bold text-var(--navy) mb-4">Purpose Beyond Cannabis</h2>
-      <p class="text-lg leading-relaxed">Ultimately, we position ourselves as a social, cultural, and educational space where cannabis is one part of a broader, responsible community experience. We help reduce stigma by showing cannabis users can be healthy, creative, and responsible. We build micro-communities of artists, professionals, and locals. We promote alternative culture, sustainability, and mental well-being.</p>
+    <div class="max-w-4xl mx-auto space-y-12 text-lg leading-relaxed text-gray-700">
+      <p>We are a <strong>private, non-profit cultural association</strong> dedicated to responsible lifestyles, creativity, and community growth.</p>
+      <p>Operating in Spain’s legally tolerated framework, we are fully compliant with regional guidance for <em>asociaciones culturales</em>.</p>
+      <p>Our space is discreet, mature, and members-only — more like a private cultural lounge than a public venue.</p>
+      <p>We foster genuine human connection through shared experiences: art, music, wellness, and education.</p>
+      <p><strong>Purpose beyond any single focus</strong>: We reduce stigma, nurture micro-communities, and champion alternative culture and mental well-being.</p>
     </div>
   </section>
 
-  <footer class="py-6 bg-var(--navy) text-white text-center">
-    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:lagunalounge.csc@gmail.com" class="underline">lagunalounge.csc@gmail.com</a></p>
+  <footer class="py-8 bg-[var(--navy)] text-white text-center">
+    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:lagunalounge.csc@gmail.com" class="underline hover:text-[var(--yellow)]">lagunalounge.csc@gmail.com</a></p>
   </footer>
 </body>
 </html>
