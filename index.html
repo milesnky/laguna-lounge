@@ -9,24 +9,25 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
   <style>
     :root { --navy: #0A1D37; --teal: #4FC3F7; --yellow: #FFB300; --sand: #FFF8E1; }
-    body { font-family: 'Open Sans', sans-serif; background: var(--sand); color: #333; line-height: 1.8; }
+    body { font-family: 'Open Sans', sans-serif; background: var(--sand); color: #333; line-height: 1.8; margin: 0; }
     h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: var(--navy); }
-    .logo { width: 180px; border-radius: 50%; border: 5px solid white; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
-    .hero { background: linear-gradient(135deg, var(--navy), var(--teal)); }
-    .card { transition: transform 0.3s ease; }
-    .card:hover { transform: translateY(-10px); }
-    .activity-img { height: 340px; object-fit: cover; border-radius: 1.5rem; box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
-    nav { transition: all 0.3s ease; }
-    nav.scrolled { background: rgba(10, 29, 55, 0.98); padding: 0.5rem 0; }
+    .logo { width: 160px; border-radius: 50%; border: 4px solid white; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+    .hero { background: linear-gradient(135deg, var(--navy), var(--teal)); padding-top: 10rem; }
+    .nav-fixed { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: var(--navy); padding: 1rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+    .nav-fixed.scrolled { padding: 0.5rem 0; }
+    .activity-img { width: 100%; height: 280px; object-fit: cover; border-radius: 1.5rem; box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+    .activity-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
+    @media (min-width: 768px) { .activity-grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+    .activity-text { display: flex; flex-direction: column; justify-content: center; }
   </style>
 </head>
 <body>
 
-  <!-- NAV - NO OVERLAP -->
-  <nav class="fixed top-0 left-0 w-full bg-[var(--navy)] text-white z-50 shadow-lg">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+  <!-- NAV -->
+  <nav class="nav-fixed text-white">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
       <img src="logo.png" alt="Laguna Lounge Logo" class="logo">
-      <div class="space-x-8 text-lg font-medium">
+      <div class="space-x-6 text-lg font-medium">
         <a href="#home" class="hover:text-[var(--yellow)]">Home</a>
         <a href="#mission" class="hover:text-[var(--yellow)]">Mission</a>
         <a href="#features" class="hover:text-[var(--yellow)]">Features</a>
@@ -36,160 +37,31 @@
     </div>
   </nav>
 
-  <!-- HERO - TEXT NOT HIDDEN -->
-  <section id="home" class="hero min-h-screen flex items-center justify-center text-white px-6 pt-24">
-    <div class="text-center max-w-4xl">
-      <h1 class="text-6xl md:text-7xl font-bold mb-6 drop-shadow-lg">Laguna Lounge CSC</h1>
-      <p class="text-2xl mb-10 font-light">Private Members Social Club · Community · Culture · Responsibility</p>
-      <a href="#join" class="btn bg-[var(--yellow)] hover:bg-white text-[var(--navy)] font-bold text-xl px-12 py-4 rounded-full shadow-xl">Join the Movement</a>
+  <!-- HERO -->
+  <section id="home" class="hero min-h-screen flex items-center justify-center text-white px-6 text-center">
+    <div class="max-w-4xl">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">Laguna Lounge CSC</h1>
+      <p class="text-xl mb-8">Private Members Social Club · Community · Culture · Responsibility</p>
+      <a href="#join" class="btn bg-[var(--yellow)] hover:bg-white text-[var(--navy)] font-bold text-lg px-10 py-3 rounded-full">Join the Movement</a>
     </div>
   </section>
 
   <!-- MISSION -->
-  <section id="mission" class="py-24 px-6 bg-white">
+  <section id="mission" class="py-20 px-6 bg-white">
     <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-5xl font-bold text-[var(--navy)] mb-8">A Private Haven for Conscious Living</h2>
-      <p class="text-xl max-w-3xl mx-auto text-gray-700 leading-relaxed">
-        We are a registered <strong>asociación cultural</strong> in Spain. Our focus: <strong>community, creativity, well-being</strong> — not consumption. 
-        A safe, mature, members-only space for connection and growth.
+      <h2 class="text-4xl font-bold text-[var(--navy)] mb-6">A Private Haven for Conscious Living</h2>
+      <p class="text-lg max-w-3xl mx-auto text-gray-700">
+        Registered <strong>asociación cultural</strong> in Spain. Focus: <strong>community, creativity, well-being</strong> — not consumption.
       </p>
     </div>
   </section>
 
   <!-- FEATURES -->
-  <section id="features" class="py-24 px-6 bg-gradient-to-b from-[#f0f4f8] to-white">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
-      <div class="card bg-white p-10 rounded-2xl shadow-lg text-center">
-        <div class="text-6xl mb-5">Private & Safe</div>
-        <h3 class="text-3xl font-bold text-[var(--navy)] mb-3">Private & Safe</h3>
+  <section id="features" class="py-20 px-6 bg-gradient-to-b from-[#f0f4f8] to-white">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+        <h3 class="text-2xl font-bold text-[var(--navy)] mb-3">Private & Safe</h3>
         <p class="text-gray-600">Members-only. ID verified. Zero tolerance. No tourists.</p>
       </div>
-      <div class="card bg-white p-10 rounded-2xl shadow-lg text-center">
-        <div class="text-6xl mb-5">Culture & Creativity</div>
-        <h3 class="text-3xl font-bold text-[var(--navy)] mb-3">Culture & Creativity</h3>
-        <p class="text-gray-600">Music, art, workshops, cinema, gaming.</p>
-      </div>
-      <div class="card bg-white p-10 rounded-2xl shadow-lg text-center">
-        <div class="text-6xl mb-5">Education & Wellness</div>
-        <h3 class="text-3xl font-bold text-[var(--navy)] mb-3">Education & Wellness</h3>
-        <p class="text-gray-600">Harm reduction, science talks, yoga, mental health.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ACTIVITIES - ALL IMAGES WORKING & MATCHING -->
-  <section id="activities" class="py-24 px-6 bg-white">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-5xl font-bold text-center text-[var(--navy)] mb-16">Activities & Experiences</h2>
-
-      <div class="space-y-24">
-
-        <!-- VINYL BAR -->
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="space-y-4">
-            <h3 class="text-3xl font-bold text-[var(--navy)]">Vinyl Bar DJ Sessions</h3>
-            <p class="text-lg text-gray-700 leading-relaxed">
-              Our signature weekly event. Members bring records or spin from our collection in the cozy vinyl bar. 
-              Deep house, jazz, soul, techno — no phones, no distractions. Just pure sound and shared vibes.
-            </p>
-            <p class="text-gray-600">Members-only · Every Friday · 8 PM – Late</p>
-          </div>
-          <img src="https://assets.milestoneinternet.com/cms-platform-for-marriott/yulwh-events-calendar/eventcalendar/v914-bar-dj-session-1741877745.jpg?time=1751147649" alt="Vinyl Bar" class="activity-img w-full">
-        </div>
-
-        <!-- ART & EXHIBITIONS -->
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <img src="https://images.unsplash.com/photo-1578662996442-48f60103fcbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Art Exhibition" class="activity-img w-full order-last md:order-first">
-          <div class="space-y-4">
-            <h3 class="text-3xl font-bold text-[var(--navy)]">Art Jams & Rotating Exhibitions</h3>
-            <p class="text-lg text-gray-700 leading-relaxed">
-              Monthly painting sessions, live sketching, and exhibitions of local artists. 
-              From abstract to street art — our walls evolve with the community. Bring your tools or just your eyes.
-            </p>
-            <p class="text-gray-600">Last Friday of the month · All levels welcome</p>
-          </div>
-        </div>
-
-        <!-- EDUCATION -->
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="space-y-4">
-            <h3 class="text-3xl font-bold text-[var(--navy)]">Science & Harm Reduction Talks</h3>
-            <p class="text-lg text-gray-700 leading-relaxed">
-              Guest experts — doctors, lawyers, cultivators — dive into cannabis science, legal rights, 
-              sustainable growing, and mental health. Open Q&A, no judgment, just knowledge.
-            </p>
-            <p class="text-gray-600">Monthly · Expert-led · Open discussion</p>
-          </div>
-          <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Talk" class="activity-img w-full">
-        </div>
-
-        <!-- COMMUNITY -->
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Tapas Night" class="activity-img w-full order-last md:order-first">
-          <div class="space-y-4">
-            <h3 class="text-3xl font-bold text-[var(--navy)]">Tapas, Games & Third Place</h3>
-            <p class="text-lg text-gray-700 leading-relaxed">
-              Weekly game nights (chess, trivia), shared tapas, yoga circles, and meditation. 
-              This is your <em>third place</em> — calm, private, community-driven.
-            </p>
-            <p class="text-gray-600">Every Thursday · Bring a dish or just yourself</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- JOIN -->
-  <section id="join" class="py-24 px-6 bg-[var(--navy)] text-white">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-5xl font-bold mb-8">Get in Touch</h2>
-      <p class="text-xl mb-10">Referral only. Begin your journey.</p>
-
-      <form action="https://formspree.io/f/xgvrebdy" method="POST" class="space-y-6 bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
-        <input type="text" name="name" placeholder="Your Name" required class="input input-bordered w-full bg-white text-gray-800 py-4 text-lg">
-        <input type="email" name="_replyto" placeholder="Your Email" required class="input input-bordered w-full bg-white text-gray-800 py-4 text-lg">
-        <input type="text" name="referral" placeholder="Referring Member (Name)" required class="input input-bordered w-full bg-white text-gray-800 py-4 text-lg">
-        <textarea name="message" placeholder="Why do you want to join?" rows="4" required class="textarea textarea-bordered w-full bg-white text-gray-800 py-4 text-lg"></textarea>
-        <button type="submit" class="btn bg-[var(--yellow)] hover:bg-white text-[var(--navy)] font-bold text-xl w-full py-4 rounded-full">Send Request</button>
-      </form>
-
-      <ol class="text-left space-y-3 mt-10 max-w-md mx-auto text-lg">
-        <li>Be referred by a current member</li>
-        <li>Attend intro evening</li>
-        <li>Sign house rules</li>
-        <li>Pay annual fee</li>
-        <li>Get your member card</li>
-      </ol>
-      <p class="mt-6 text-sm opacity-80">You'll receive a reply at your email. We respect your privacy.</p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="py-8 bg-[var(--navy)] text-white text-center border-t border-white/10">
-    <p>&copy; 2025 Laguna Lounge CSC · <a href="mailto:lagunalounge.csc@gmail.com" class="underline hover:text-[var(--yellow)]">lagunalounge.csc@gmail.com</a></p>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('nav');
-      if (window.scrollY > 100) nav.classList.add('scrolled');
-      else nav.classList.remove('scrolled');
-    });
-
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('success') === 'true') {
-      alert('Thank you! Your request was sent. We’ll contact you soon.');
-    }
-  </script>
-
-</body>
-</html>
+      <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+        <h3 class="text-2xl font-bold text-[
